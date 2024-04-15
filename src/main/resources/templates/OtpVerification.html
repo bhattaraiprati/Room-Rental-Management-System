@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/tiny-slider.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/added.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"  />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}"  /> 
+
+    <style>
+      .login-container {
+        background-color: rgba(0, 32, 74, 0.05);
+		display: block;
+        height: 36.6rem;
+        width: 88.9rem;
+      }
+      .form_container{
+      display: block;
+      top: 50% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form_container">
+        <!-- <i class="uil uil-times form_close"></i> -->
+        <!-- Login From -->
+        <form action="ResetClose" method="get">
+         <input type="submit" class="form_close" value="&times;">
+        </form>
+        <div class="form login_form">
+          <form action="OtpVerify" method="post">
+            <h2>Verify OTP</h2>
+            <h8>Please enter 4 digit code sent to your email address.</h8>
+            <div class="input_box">
+              <input type="number" name="otp" placeholder="Enter OTP"  />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+             
+            
+            
+            <button type="submit" class="button">Verify</button>
+            
+          </form>
+        </div>
+        
+        
+      </div>
+    </div>
+  </body>
+</html>

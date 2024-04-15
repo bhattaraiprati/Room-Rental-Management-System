@@ -1,0 +1,808 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    
+	<link rel="stylesheet" type="text/css" th:href="@{/css/fonts/icomoon/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/fonts/flaticon/font/flaticon.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/tiny-slider.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/added.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"  />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}"  /> 
+     <link rel="stylesheet" type="text/css" th:href="@{/css/styledetail.css}"  />
+      <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"  />
+      <link rel="stylesheet" type="text/css" th:href="@{/css/favourite.css}"  />
+    
+    <title>
+      Property Details
+    </title>
+    <style>
+
+
+.avatar {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin-right: 10px;
+}
+
+
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .dropdown-item .material-icons {
+	font-size: 21px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.navbar .nav-item.open > a, .navbar .nav-item.open > a:hover, .navbar .nav-item.open > a:focus {
+	color: #fff;
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777 !important;
+	padding: 8px 20px;
+	line-height: normal;
+	font-size: 15px;
+}
+.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
+	color: #333 !important;
+	background: transparent !important;
+}
+.navbar .navbar-nav .active a, .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
+	color: #fff;
+	text-shadow: 0 0 4px rgba(255,255,255,0.2);
+	background: transparent !important;
+}
+.navbar .navbar-nav .user-action {
+	padding: 9px 15px;
+	font-size: 15px;
+}
+.navbar .navbar-toggle {
+	border-color: #fff;
+}
+.navbar .navbar-toggle .icon-bar {
+	background: #fff;
+}
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+	background: transparent;
+}
+.navbar .navbar-nav .open .dropdown-menu {
+	background: #faf7fd;
+	border-radius: 1px;
+	border-color: #faf7fd;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .divider {
+	background-color: #e9ecef !important;
+}
+@media (min-width: 1200px){
+	.form-inline .input-group {
+		width: 350px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 1199px){
+	.navbar .navbar-nav > a > i {
+		display: inline-block;			
+		text-align: left;
+		min-width: 30px;
+		position: relative;
+		top: 4px;
+	}
+	.navbar .navbar-collapse {
+		border: none;
+		box-shadow: none;
+		padding: 0;
+	}
+	.navbar .navbar-form {
+		border: none;			
+		display: block;
+		margin: 10px 0;
+		padding: 0;
+	}
+	.navbar .navbar-nav {
+		margin: 8px 0;
+	}
+	.navbar .navbar-toggle {
+		margin-right: 0;
+	}
+	.input-group {
+		width: 100%;
+	}
+}
+ @media (min-width: 576px){
+.modal-dialog {
+    max-width: 29rem;
+    margin-right: auto;
+    margin-top: 0rem;
+    margin-left: 20rem;
+   	
+    position: fixed; 
+    z-index: 10;
+    
+}
+.model-content{
+	background-color: #f3f3f3;
+}
+        }
+</style>
+  </head>
+  <body>
+    <!-- <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0"
+    >
+      <a href="index" class="navbar-brand p-0">
+        <img src="/images/room rental logo.png" alt="logo" class="logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+          <a href="/index" class="nav-item nav-link ">Home</a>
+          <a href="/properties" class="nav-item nav-link">Properties</a>
+           <a href="/addlisting" class="nav-item nav-link">Add Listing</a>
+
+          <a href="/favourite" class="nav-item nav-link active">Favourite</a>
+        </div>
+         <a href="/loginbtn" th:if="${login == null}"
+   class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
+   id="form-open"
+   >Login</a>
+       
+      </div>
+      
+      <div class="nav-item dropdown"  th:if="${login != null}"   >
+				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action " ><img alt="" th:src="@{'/uploadImg/' + ${userList.image}}" style="
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;">  <span th:text="${userList.username}"></span><b class="caret"></b></a>
+
+				<div class="dropdown-menu">
+					<a href="/editProfile" class="dropdown-item"><i class="fa fa-user-o"></i>Edit Profile</a>
+					
+					<div class="divider dropdown-divider"></div>
+					<a href="/manageProfile" class="dropdown-item"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+</svg></i> Manage Profile</a>
+					<a href="/changePassword" class="dropdown-item"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-lock" viewBox="0 0 16 16">
+  <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5v-1a2 2 0 0 1 .01-.2 4.49 4.49 0 0 1 1.534-3.693Q8.844 9.002 8 9c-5 0-6 3-6 4m7 0a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1"/>
+</svg></i> Change Password</a>
+					<a href="logout" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+				</div>
+			</div>
+    </nav>
+    
+    <div  style="padding-top: 6.3rem;"  class="filter">
+    
+
+		<div th:if="${sucess == 'success'}" class="alert alert-success alert-dismissible fade show" role="alert">
+  			<strong>Success!</strong> Property is Successfully saved.
+  			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div th:if="${sucess == 'failed'}" class="alert alert-danger alert-dismissible fade show" role="alert">
+  			<strong>Error!</strong> Failed to save property. Please Login first.
+  			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+
+ 
+
+</div>
+
+<div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    
+
+                    <div class="property-section">
+                        <div class="header-top">
+                            <a href=""><h2>Saved Properties</h2></a>
+                        </div>
+                        
+                        
+                        <div th:if="${delete == 'deleted'}" class="modal-dialog" role="document" style="">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-body p-4 text-center">
+        <h5 class="mb-0">Are you sure you want to delete this property?</h5>
+        <p class="mb-0">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+        <a th:href="@{'/deleteProperty/' + ${propertyId}}" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" ><button type="submit" style="border: none;
+    background-color: transparent;
+    color: #16697a;" ><strong>Yes, delete</strong></button></a>
+        <a href="/favourite" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" ><button type="submit" style="border: none;
+    background-color: transparent;
+    color: #16697a;"  data-bs-dismiss="modal">cancel</button></a>
+      </div>
+    </div>
+  </div>
+
+                        <div class="filterng-nav">
+                            <div class="right-bar">
+                              <div class="item item-1" onclick="getPropertyList('all')">
+                                <span>All</span>
+                              </div>
+                              <!-- <div class="item" onclick="getPropertyList('Rent')">
+                                <p>For Rent</p>
+                              </div>
+                              <div class="item" onclick="getPropertyList('Sell')">
+                                <p>For Sale</p>
+                              </div>
+                              <div class="item" onclick="getPropertyList('Sold')">
+                                <p>Sold</p>
+                              </div> -->
+                              <div id="marker"></div>
+                            </div>
+                            <div class="left-bar">
+                              <form action="">
+                                <div class="search-input">
+                                    <input type="text" name="label" placeholder="search by city & province">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                              </form>
+
+                            </div>
+                        </div>
+
+                        <div class="properties-box">
+                        
+                        
+                        
+
+                            <div class="properties">
+                                
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4" style="padding-left: calc(var(--bs-gutter-x)* 1.5);" th:each="property : ${propertyList}">
+            <div class="property-item mb-30">
+              <a th:href="@{'/delete/' + ${property.id}}" class="img"> 
+              <span class="d-block d-flex align-items-center" style="margin-left: 17rem;
+    position: absolute;
+    
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid; */
+    border-radius: 15px;
+    background-color: red;
+    
+    justify-content: center;">
+                            <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-archive-fill" viewBox="0 0 16 16">
+  <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8z"/>
+</svg>
+                    </span>
+                          </span></a>
+                <img th:src="@{'/uploadImg/' + ${property.image}}" alt="Image" class="img-fluid" />
+                
+              
+              
+
+              <div class="property-content" style="margin-top: 0px;">
+                <div class="price mb-2"><span th:text="${'NRP '+property.price}"></span></div>
+                <div>
+                  <span class="d-block mb-2 text-black-50" th:text="${property.place}"
+                    ></span
+                  >
+                  <span class="city d-block mb-3" th:text="${property.place} +',   '+ ${property.city}"></span>
+
+                  <div class="specs d-flex mb-4">
+                    <span class="d-block d-flex align-items-center me-3" >
+                      <span class="icon-bed me-2"></span>
+                      <span class="caption" th:text="${property.bedroom}"></span>
+                    </span>
+                    
+                    <span class="d-block d-flex align-items-center" style="margin-left: 9rem;">
+                            <span>
+                    
+                    </span>
+                          </span>
+                    
+                    	
+                  </div>
+                  
+	
+
+                  <a
+                    th:href="@{'/propertyDetails/' + ${property.id}}"
+                    class="btn btn-primary py-2 px-3"
+                    >See details</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- .item -->
+          </div>
+           <h1 th:text="${errormsg}"></h1>
+         
+          
+        
+                                   
+                               
+                                  
+                                    
+                                
+                                    <div class="empty-mssg" th:if="${#lists.isEmpty(propertyList)}" >
+                                        <div class="mssg-body">
+                                        <p>You haven't saved any property yet.</p>
+                                        <p>Start searching for properties to add now.</p>
+            
+                                        <a href="/properties">Search Homes</a>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                
+
+                            </div>
+
+                            <!-- <div class="empty-mssg">
+                                <div class="mssg-body">
+                                <p>You haven't saved any property yet.</p>
+                                <p>Start searching for properties to add now.</p>
+    
+                                <a href="{% url 'searchomes' %}">Search Homes</a>
+                                </div>
+                            </div> -->
+
+                           
+
+                        </div>
+
+                        <hr>
+
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="background-overlay"></div>
+
+
+
+
+        
+
+
+
+
+    
+
+    
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Contact</h3>
+              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+              <ul class="list-unstyled links">
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li>
+                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Sources</h3>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Creative</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Links</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Our Vision</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+
+              <ul class="list-unstyled social">
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-pinterest"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-dribbble"></span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <!-- 
+              **==========
+              NOTE: 
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+              **==========
+            -->
+
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . All Rights Reserved. &mdash; Designed with love by
+              <a href="https://untree.co">Untree.co</a>
+              <!-- License information: https://untree.co/license/ -->
+            </p>
+            <div>
+              Distributed by
+              <a href="https://themewagon.com/" target="_blank">themewagon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    
+    
+    <script th:src="@{/js/aos.js}"></script>
+    <script th:src="@{/js/tiny-slider.js}"></script>
+    <script th:src="@{/js/navbar.js}"></script>
+    <script th:src="@{/js/counter.js}"></script>
+    <script th:src="@{/js/custom.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+    <script th:src="@{/js/tiny-slider.js}"></script>
+     <script th:src="@{/js/validation.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+            let items = document.querySelectorAll('.item')
+            let marker  = document.getElementById('marker')
+
+            let roomContainer = document.querySelectorAll('.room')
+
+            let menuBtn = document.querySelector('.menu-btn')
+            let faSolid = document.querySelector('.fa-solid')
+            var properties = document.querySelector('.properties')
+            var savedRoom = document.querySelector('.saved_room')
+
+            let backgrooundOverlay = document.getElementById('background-overlay')
+            let formSubmitConfirm = document.querySelector('.form-submit-confirm')
+
+            let savedHomes = '{{savedhomes}}'
+
+            if(savedHomes == 0){
+              document.querySelector('.empty-mssg').style = "display: block"
+            }
+
+
+            roomContainer.forEach((btn) =>{
+                
+                btn.addEventListener('click', (e)=>{
+
+
+                console.log(e)
+
+                const deleteBtn = e.target.closest('#delete_saved_homes')
+
+                const cancelFormSubmit = e.target.closest('#cancel-form-submit')
+                const deleteSubmitBtn = e.target.closest('#delete_submit_btn')
+                
+
+                if(deleteBtn){
+
+                    console.log("hello")
+                    backgrooundOverlay.style.display = 'block'
+                    btn.childNodes[3].style.display = 'block'
+                    console.log(document.getElementsByTagName('body'))
+                    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                    
+                    a = window.scrollY + 192
+
+                    btn.childNodes[3].style.top = `${a}px`
+
+
+
+                    console.log(window.scrollY)
+                }
+
+                if(deleteSubmitBtn){                    
+                    backgrooundOverlay.style.display = 'none'
+                    btn.childNodes[3].style.display = 'none'
+                    document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+
+                }
+
+
+                if(cancelFormSubmit){
+                    backgrooundOverlay.style.display = 'none'
+                    btn.childNodes[3].style.display = 'none'
+                    document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+
+                }
+
+
+            })
+
+            })
+           
+
+
+          
+            
+            document.addEventListener('click', (e) =>{
+
+                let menuBtn = e.target.closest('.menu-btn')
+                if(menuBtn){
+                    menuBtn.parentNode.childNodes[5].classList.toggle('show-dropdown')
+                }
+
+            })
+
+            function indicator(e){
+              marker.style.left = e.offsetLeft+"px";
+              marker.style.width =  e.offsetWidth+"px";
+            }
+
+
+            items.forEach(link =>{
+              link.addEventListener('click', (e)=>{
+                indicator(e.target)
+              })
+            })
+
+
+            
+            window.addEventListener('DOMContentLoaded', () =>{
+              let item1 = document.querySelector('.item-1')
+              marker.style.left = item1.offsetLeft+"px";
+              marker.style.width =  item1.offsetWidth+"px";
+
+            })
+
+            function getToken(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            const csrftoken = getToken('csrftoken');
+
+            
+            function getPropertyList(label){
+                    var url = '/getSavedPrpertyByCategory/'
+
+                    if(user == 'AnonymousUser'){
+                        return
+                    }
+                    else{
+
+                        fetch(url, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrftoken
+                            },
+                            body: JSON.stringify({"type": label })
+
+                        }) 
+                        .then((response) =>{
+                            return response.json()
+                        })
+                        .then((data) =>{
+
+                        data = JSON.parse(data['property'])
+                        
+                       
+                        
+                        if(data.length == 0){
+                            console.log("empty")
+                            console.log(properties)
+                            properties.innerHTML = ''
+
+                            properties.innerHTML = `<div class="empty-mssg">
+                                                        <div class="mssg-body">
+                                                        <p>You haven't saved any property yet.</p>
+                                                        <p>Start searching for properties to add now.</p>
+                            
+                                                        <a href="/searchomes">Search Homes</a>
+                                                        </div>
+                                                    </div>`
+
+                            // document.querySelector('.empty-mssg').style = "display: block"
+                        }else{
+                            // document.querySelector('.empty-mssg').style = "display: none"
+                            displayProperty(data)
+                        }                
+                        })
+
+                    }
+
+            }
+
+
+
+            function displayProperty(data){
+
+                properties.innerHTML = ''
+                // savedRoom.innerHTML = ''
+
+
+                for(var i=0; i<data.length; i++){
+
+                    console.log(data[i])
+
+                    properties.innerHTML += `<div class="room">
+                                    <div class="image">
+                                        <a href="/room_detail/${data[i].pk}">
+                                            <img src="${data[i].fields.Image}" alt="">
+                                            <div class="overlay"></div>
+                                        </a>
+                                        <div class="image-top">
+                                            <p id="${data[i].fields.class_Name}">${data[i].fields.property_status}</p>
+                                            <div class="fav-box">
+                                                <a href="/deleteSavedHomes/${data[i].pk}"><i class="fa-solid fa-trash"></i></a>
+                                            </div>
+      
+                                        </div>
+                                    </div> 
+      
+                                    <a href="/room_detail/${data[i].pk}">
+                                        <div class="price-date">
+                                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+                                            </svg>${data[i].fields.price}</h3>
+                                          
+                                            <p>${data[i].fields.date}</p>
+                                        </div>
+                                        <div class="room-info">
+                                            <div class="bed ">
+                                                <i class="fa-solid fa-bed"></i>
+                                                <p>${data[i].fields.bedroom} bd</p>
+                                            </div>
+                                            <div class="bat">
+                                                <i class="fa-solid fa-bath"></i>
+                                                <p>${data[i].fields.bathroom} ba</p>
+                                            </div>
+                                            <div class="area ">
+                                                <i class="fa-solid fa-chart-area"></i>
+                                                <p>${data[i].fields.area} sq.ft</p>
+                                            </div>
+                                        </div>
+      
+                                        <div class="room-title">
+                                            <p>${data[i].fields.bedroom} BHK ${data[i].fields.type} on ${data[i].fields.category}</p>
+                                        </div>
+      
+                                        <div class="address">
+                                            <p>${data[i].fields.city}</p>
+                                        </div>
+                                    </a>
+      
+                                    <div id="bottomline"></div>
+                                  </div>
+                                  `
+
+
+
+
+
+                   
+                    }   
+}
+
+
+
+
+            
+
+
+        </script>
+  </body>
+</html>

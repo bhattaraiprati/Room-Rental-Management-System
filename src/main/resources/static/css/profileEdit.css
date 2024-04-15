@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+
+
+body{
+    background-color: #f9f7f7;
+}
+
+
+
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.row{
+    padding: 15px;
+}
+
+hr{
+    /* margin: 0; */
+}
+
+
+/* nav{
+    height: 75px;
+    width: 100%;
+    background-color: aliceblue;
+} */
+
+
+
+.card-box{
+    border: 1px solid #cdc6c6;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.card-box .profile-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 19px 0 0 0;
+    /* background-color: red; */
+}
+
+
+.card-box .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card-box .image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card-box .profile-options{
+    margin-top: 20px;
+}
+
+.card-box .profile-options a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.card-box .profile-options .edit-div{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(174, 174, 174);
+    position: relative;
+}
+
+.card-box .profile-options .edit-div i{
+   margin-right: 10px;
+}
+
+.card-box .profile-options .edit-div p{
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+
+.card-box .profile-options .edit-div:hover{
+    background-color: rgb(209, 209, 209);
+}
+
+
+
+.card-box .profile-options .notification-icon{
+    position: absolute;
+    right: 144px;
+    top: 9px;
+}
+
+.card-box .profile-options .glow-notification{
+    color: #e92828;
+}
+
+
+
+
+/* ------------card-container------------------------------- */
+
+
+.card-container{
+    border: 1px solid #cdc6c6;
+    /* height: 300px; */
+    border-radius: 7px;
+    padding: 20px 21px;
+    background-color: white;
+}
+
+
+.card-container h1{
+    font-size: 25px;
+}
+
+
+.card-container form{
+    margin-top: 2rem;
+}
+
+
+
+
+/*------------------------ footer */
+footer{
+    margin-top: 20px;
+}
+
+.sixth-section{
+    padding: 20px;
+    background-color: rgb(66, 66, 66);
+}
+
+.sixth-section .footer-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.sixth-section h2{
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.sixth-section .links{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* text-align: left; */
+    
+}
+
+.sixth-section .links a{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.sixth-section .location, .contact, .email{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.sixth-section .location i, .contact i, .email i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+.sixth-section .links h3{
+    font-size: 26px;
+
+}
+.sixth-section .links .social i{
+    font-size: 34px;
+    margin-right: 10px;
+
+}
+/* ===========================Footer=========================== */
+

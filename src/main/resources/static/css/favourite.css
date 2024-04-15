@@ -1,0 +1,780 @@
+@charset "UTF-8";
+
+body{
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+hr, p, span{
+    margin: 0;
+    padding: 0;
+}
+
+
+#background-overlay {
+    background-color: #000000c9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: none;
+}
+
+
+
+.row>*{
+    padding: 0 !important;
+    margin: 0 !important;
+} 
+
+nav{
+    height: 75px;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.property-section{
+    padding: 23px 47px;
+}
+
+
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-top h2{
+    font-size: 31px;
+}
+
+.header-top h2:hover{
+    text-decoration: underline;
+}
+
+.header-top a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.header-top .add-property-btn{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header-top .add-property-btn div{
+    width: 26px;
+    height: 26px;
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header-top .add-property-btn div i{
+    color: white;
+    font-size: 17px;
+}
+
+
+.header-top .add-property-btn p{
+    font-size: 15px;
+    font-weight: 700;
+    color: blue;
+}
+
+
+.header-top .add-property-btn p:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ==============================Filtering Nav Start====================================== */
+/* .filterng-nav{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    padding: 9px 24px;
+}
+
+.filterng-nav .right-bar{
+    display: flex;
+    align-items: center;
+    width: 249px;
+    justify-content: space-between;
+}
+
+
+
+.filterng-nav .right-bar span{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.filterng-nav .right-bar p{
+  font-size: 20px;
+}
+
+
+
+.filterng-nav .left-bar{
+    display: flex;
+    align-items: center;
+}
+
+.filterng-nav .left-bar .search-input{
+    border: 1px solid #b9b4b4;
+    padding: 9px;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    background: #f1f1f1;
+}
+
+.filterng-nav .left-bar .search-input input{
+    border: none;
+    outline: none;
+    background: transparent;
+}   
+ */
+
+ .filterng-nav{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    padding: 9px 24px;
+}
+
+.filterng-nav .right-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+}
+
+.filterng-nav .right-bar .item{
+    margin-right: 30px;
+}
+
+.filterng-nav .right-bar #marker{
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    bottom: -15px;
+    width: 0;
+    height: 4px;
+    background-color: #205bd5;
+    transition: 0.5s;
+}
+
+
+
+.filterng-nav .right-bar span{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.filterng-nav .right-bar p{
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+
+.filterng-nav .left-bar{
+    display: flex;
+    align-items: center;
+    margin-right: 19px;
+}
+
+.filterng-nav .left-bar .search-input{
+    border: 1px solid #b9b4b4;
+    padding: 9px;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    background: #f1f1f1;
+}
+
+.filterng-nav .left-bar .search-input input{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}   
+
+
+
+
+/* ==============================Filtering Nav end====================================== */
+
+/* ==============================properties-box start====================================== */
+
+
+
+.properties-box{
+    padding: 23px;
+    background: white;
+    margin-top: 26px;
+}
+
+
+.properties{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.properties a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.properties .room{
+    width: 280px;
+    border-radius: 8px;
+    margin-right: 22px;
+    margin-bottom: 20px;
+}
+
+
+.properties .room h3{
+    font-size: 22px;
+    color: #4e4d4d;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+
+}
+
+.properties .room svg{
+    height: 23px;
+    width: 22px;
+}
+
+
+
+.properties .room .image{
+    width: 280px;
+    border-radius: 8px;
+    height: 180px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.properties .room .image img{
+    width: 280px;
+    border-radius: 8px;
+    height: 180px;
+}
+
+
+.properties .room .image .image-top{
+    position: absolute;
+    display: flex;
+    top: 4px;
+    left: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.properties .room .image .image-top #rent{
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.properties .room .image .image-top .menu-btn{
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    right: 14px;
+    padding: 0px 10px;
+    border-radius: 2px;
+    z-index: 15;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+
+
+.properties .room .image .image-top #sell{
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.properties .room .image .image-top #rented{
+
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.properties .room .image .image-top #sold{
+
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+/* ---------Menu dropdown--- */
+
+
+
+
+.properties .room .image .image-top  .menu-dropdown{
+    position: absolute;
+    width: 137px;
+    height: 120px;
+    top: 25px;
+    background-color: white;
+    z-index: 20;
+    right: 7px;
+    border-radius: 3px;
+    padding: 10px;
+    display: none;
+    transition: 0.3s all ease;
+}
+
+
+.show-dropdown{
+    display: block !important;
+}
+
+
+.properties .room .image .image-top  .menu-dropdown .sold-section{
+    display: flex;
+    margin-top: 15px;
+}
+
+.properties .room .image .image-top  .menu-dropdown .sold-section #status{
+   width: 50px;
+}
+
+
+.properties .room .image .image-top  .menu-dropdown .toggle {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 29px;
+    border-radius: 160px;
+    background: #f1eaea;
+    border: 2px solid rgb(56 193 22);
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+
+.properties .room .image .image-top  .menu-dropdown .toggle .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: green;
+    border-radius: 50%;  
+    transition: 0.5s;    
+}
+
+.properties .room .image .image-top  .menu-dropdown .toggle.active{
+    border: 2px solid red;
+}
+
+
+.properties .room .image .image-top  .menu-dropdown .toggle.active .indicator{
+    left: 29px;
+    background: red;
+
+}
+
+
+.properties .room .image .image-top  .menu-dropdown p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.properties .room .image .image-top  .menu-dropdown #edit-btn{
+    color: blue;
+    margin-bottom: 6px;
+}
+
+.properties .room .image .image-top  .menu-dropdown #edit-btn:hover{
+    color: black;
+}
+
+
+.properties .room .image .image-top  .menu-dropdown #delete-btn{
+    color: red;
+    margin-top: 6px;
+}
+
+
+.properties .room .image .image-top  .menu-dropdown #delete-btn:hover{
+    color: black;
+}
+
+
+
+.properties .room .image .image-top  .menu-btn:hover{
+    background-color: rgb(20, 128, 17);
+    color: white !important;
+
+
+}
+
+
+
+/* -----------Menudropdown end---------- */
+
+
+.properties .room .form-submit-confirm{
+    
+    position: absolute;
+    top: 13rem;
+    left: 39%;
+    width: 408px;
+    height: 241px;
+    background-color: white;
+    z-index: 16;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    display: none;
+    
+}
+
+.properties .room .form-submit-confirm .submit-div{
+    margin-top: 3rem;
+}
+
+.properties .room .form-submit-confirm .submit-div p{
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.properties .room .form-submit-confirm .submit-div button{
+    padding: 7px 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+.properties .room .image .image-top .fav-box{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 12px;
+    top: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+
+/* .properties .room .image .image-top .fav-box:hover{
+    background: #ffffff70;
+} */
+
+
+
+
+.properties .room .image .image-top i{
+    /* font-size: 22px;
+    cursor: pointer;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red; */
+
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    background: #dd3747;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease;
+
+}
+
+
+.properties .room .image .image-top i:hover{
+
+    background: #a7a7a7;
+
+    /* color: red; */
+}
+
+
+
+
+
+
+
+.properties .room .image .image-top .saved-room-icon{
+    -webkit-text-fill-color: #49bf0c;
+
+}
+
+.properties .room .image .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c00;
+    z-index: 10;
+    opacity: .1;
+
+}
+
+
+
+
+.properties .room .image h3{ 
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #484242
+}
+
+
+
+.properties .room .price-date{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.properties .room .room-info{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 16px;
+    color: #646161;
+    width: 216px;
+    font-family: 'Poppins', sans-serif;
+    /* background: red; */
+}
+
+.properties .room .room-info i{
+    margin-right: 5px;
+}
+
+
+
+.properties .room .room-info .bed{
+    display: flex;
+    text-align: center;
+}
+
+
+
+.properties .room .room-info .bed, .bat, .area{
+    display: flex;
+    align-items: center;
+}
+
+
+.properties .room .room-title p{
+    font-weight: 600;
+    font-size: 19px;
+    color: rgb(68 66 66);
+    margin-bottom: 6px;
+}
+
+
+.properties .room .address p{
+    font-weight: 600;
+    font-size: 19px;
+    color: rgb(68 66 66);
+    margin-bottom: 6px;
+ }
+
+
+
+ .properties .room #bottomline{
+    height: 1px;
+    width: 100%;
+    background-color: #d5d5d5;
+ }
+
+
+
+
+
+/* -------------------Empty message ----------------------- */
+
+.properties-box .empty-mssg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.properties-box .empty-mssg .mssg-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.properties-box .empty-mssg .mssg-body p{
+   font-size: 17px;
+}
+
+
+.properties-box .empty-mssg .mssg-body a{
+    background-color: #005555;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-top: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    transition: 0.5s all ease;
+}
+
+.properties-box .empty-mssg .mssg-body a:hover{
+    background-color: white;
+    border: 1px solid rgb(192, 192, 192);
+    color: black;
+}
+
+
+
+
+/* ==============================properties-box end====================================== */
+
+
+
+/* ===========================Footer=========================== */
+
+
+/*------------------------ footer */
+footer{
+    margin-top: 20px;
+}
+
+.sixth-section{
+    padding: 20px;
+    background-color: rgb(66, 66, 66);
+}
+
+.sixth-section .footer-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.sixth-section h2{
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.sixth-section .links{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* text-align: left; */
+    
+}
+
+.sixth-section .links a{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.sixth-section .location, .contact, .email{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.sixth-section .location i, .contact i, .email i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+.sixth-section .links h3{
+    font-size: 26px;
+
+}
+.sixth-section .links .social i{
+    font-size: 34px;
+    margin-right: 10px;
+
+}
+
+
+
+
+

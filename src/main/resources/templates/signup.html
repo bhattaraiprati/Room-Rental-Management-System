@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/tiny-slider.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/added.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"  />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}"  />
+
+    <style>
+      .login-container {
+        background-color: rgba(0, 32, 74, 0.05);
+
+        height: 50rem;
+        width: 88.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form_container">
+        <!-- <i class="uil uil-times form_close"></i> -->
+        <!-- Login From -->
+        <form action="closebtn" method="get">
+         <input type="submit" class="form_close" value="&times;">
+        </form>
+        
+        <!-- Signup From -->
+       <div class="form signup_form">
+          <form id="signupForm" action="signup" method="post" enctype="multipart/form-data">
+            <h2>Signup</h2>
+            <div class="input_box">
+              <input
+                type="email"
+                id="email"
+                name="useremail"
+                placeholder="Enter your email"
+              />
+              <i class="uil uil-envelope-alt email"></i>
+              <div th:if="${error}" style="color: red;">
+    			<p th:text="${error}"></p>
+			</div>
+              <div
+                class="error-message"
+                style="color: red"
+                id="emailError"
+              ></div>
+              <!-- Error message container for email -->
+            </div>
+            <div class="input_box">
+              <input
+                type="text"
+                id="name"
+                name="firstName"
+                placeholder="Enter your First Name"
+              />
+              <i class="uil uil-user email"></i>
+              <div
+                class="error-message"
+                style="color: red"
+                id="nameError"
+              ></div>
+              <!-- Error message container for name -->
+            </div>
+            <div class="input_box">
+              <input
+                type="text"
+                id="name"
+                name="lastName"
+                placeholder="Enter your Last Name"
+              />
+              <i class="uil uil-user email"></i>
+              <div
+                class="error-message"
+                style="color: red"
+                id="nameError"
+              ></div>
+              <!-- Error message container for name -->
+            </div>
+            <div class="input_box">
+              <input
+                type="text"
+                id="name"
+                name="username"
+                placeholder="Enter Username"
+              />
+              <i class="uil uil-user email"></i>
+              <div
+                class="error-message"
+                style="color: red"
+                id="nameError"
+              ></div>
+              <!-- Error message container for name -->
+            </div>
+            <div class="input_box">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create password"
+              />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+              <div
+                class="error-message"
+                style="color: red"
+                id="passwordError"
+              ></div>
+              <!-- Error message container for password -->
+            </div>
+            <div class="input_box confirm-input-box">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm password"
+              />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+              <div
+                class="error-message"
+                style="color: red"
+                id="confirmPasswordError"
+              ></div>
+              <!-- Error message container for confirm password -->
+            </div>
+            
+            <button type="submit" class="button">Signup Now</button>
+            <div class="login_signup">
+              Already have an account? <a href="loginbtn" id="login">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script th:src="@{/js/validation.js}"></script>
+  </body>
+</html>

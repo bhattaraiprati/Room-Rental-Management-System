@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/tiny-slider.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/added.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"  />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}"  /> 
+
+    <style>
+      .login-container {
+        background-color: rgba(0, 32, 74, 0.05);
+		display: block;
+        height: 36.6rem;
+        width: 88.9rem;
+      }
+      .form_container{
+      display: block;
+      top: 50% !important;
+      }
+    </style>
+  </head>
+  <body>
+  <div th:if="${success == 'success'}" class="alert alert-success alert-dismissible fade show" style="    margin-top: 6.5rem;
+    position: fixed;
+    z-index: 10;
+    right:  1rem;" role="alert">
+    <strong>Success!</strong> Password Changed Successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    <div class="login-container">
+      <div class="form_container">
+        <!-- <i class="uil uil-times form_close"></i> -->
+        <!-- Login From -->
+        <form action="closebtn" method="get">
+         <input type="submit" class="form_close" value="&times;">
+        </form>
+        <div class="form login_form">
+          <form action="login" method="post">
+            <h2>Login</h2>
+            <div class="input_box">
+              <input type="email" name="useremail" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+             <div th:if="${invalid}" style="color: red;">
+            <p th:text="${invalid}">Invalid credentials</p>
+       		 </div>
+            <div class="input_box">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                name="password"
+                required
+              />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+             
+            </div>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="forgotPassword" class="forgot_pw">Forgot password?</a>
+            </div>
+            <button type="submit" class="button">Login Now</button>
+            <div class="login_signup">
+              Don't have an account? <a href="signup" id="signup">Signup</a>
+            </div>
+          </form>
+        </div>
+        <!-- Signup From -->
+        
+      </div>
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
