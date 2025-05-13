@@ -28,5 +28,10 @@ A comprehensive web-based room rental management system developed using Spring B
   - Spring Mail (for notifications)
 
 ## Screenshots
-| Home Page |
+
 ![Image alt](https://github.com/bhattaraiprati/Room-Rental-Management-System/blob/a98130fc8b77e94ffb199acceabb159ce9ea25c0/Home%20Page.png?raw=true)
+
+![Image alt](https://github.com/bhattaraiprati/Room-Rental-Management-System/blob/afc9939f4e7758b3dbab31510127d22fe38d5af6/Property%20Listed.png?raw=true)
+
+![Image alt](https://github.com/bhattaraiprati/Room-Rental-Management-System/blob/afc9939f4e7758b3dbab31510127d22fe38d5af6/Profile%20Management.png?raw=true)
+
