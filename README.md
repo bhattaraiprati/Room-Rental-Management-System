@@ -29,4 +29,4 @@ A comprehensive web-based room rental management system developed using Spring B
 
 ## Screenshots
 | Home Page |
-![Home Page] (https://github.com/bhattaraiprati/Room-Rental-Management-System/blob/a98130fc8b77e94ffb199acceabb159ce9ea25c0/Home%20Page.png)
+![Image alt](https://github.com/bhattaraiprati/Room-Rental-Management-System/blob/a98130fc8b77e94ffb199acceabb159ce9ea25c0/Home%20Page.png?raw=true)
